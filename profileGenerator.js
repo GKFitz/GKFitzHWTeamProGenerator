@@ -48,14 +48,12 @@ function profileGenerator(teamArray){
             html+= `<div>
             <h2>${employee.getName()}</h2>
             <h3>${employee.getRole()}</h3>
-            <p>id: ${employee.getId()}</p>
+            <p>id:${employee.getId()}</p>
             <p>Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></p>`;
-                //this conditional will make sure the that the different items go to the right role
                 if(employee.getRole() === "Manager") {
                     html+= `<p>Office number: ${employee.getOfficeNumber()}</p>`;
                 }else if(employee.getRole() === "Engineer"){
                     html+= `<p>Github: <a href="${employee.getGithub()}"> ${employee.getGithub()}</a></p>`;
-
                 }else if(employee.getRole() === "Intern") {
                     html+= `<p>School: ${employee.getSchool()}</p>`;
                 };
