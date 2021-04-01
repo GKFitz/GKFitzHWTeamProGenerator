@@ -35,3 +35,10 @@ test("get the name of an employee with the method",() => {
     expect(roger.getName()).toBe(name);
 })
 
+// get the id with method
+test("get the employeeID of an employee with the method",() => {
+    const id= 1;
+    const roger= new Employee("name", id);
+    expect(roger.getId()).toBe(id);
+})
+
