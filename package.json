@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "jest": "^26.6.3"
+  },
+  "name": "GKFitzHWTeamProGenerator",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GKFitz/GKFitzHWTeamProGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GKFitz/GKFitzHWTeamProGenerator/issues"
+  },
+  "homepage": "https://github.com/GKFitz/GKFitzHWTeamProGenerator#readme"
+}
