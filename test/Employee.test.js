@@ -42,3 +42,10 @@ test("get the employeeID of an employee with the method",() => {
     expect(roger.getId()).toBe(id);
 })
 
+// get the email with method
+test("get the email of an employee with the method",() => {
+    const email= "rogerDoger@test.com";
+    const roger= new Employee("name", 1, email);
+    expect(roger.getEmail()).toBe(email);
+})
+
