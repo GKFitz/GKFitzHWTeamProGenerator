@@ -1,5 +1,5 @@
-const fs = require('fs');
-//const test = require('jest');
+// const fs = require('fs');
+const test = require('jest');
 const inquirer = require('inquirer');
 const profileGenerator= require("./profileGenerator");
 // const Employee= require("./lib/Employee.js");
