@@ -49,3 +49,9 @@ test("get the email of an employee with the method",() => {
     expect(roger.getEmail()).toBe(email);
 })
 
+// get role method return Employee
+test("get the role of an employee with the method",() => {
+    const roger= new Employee();
+    expect(roger.getRole()).toBe("Employee");
+})
+
