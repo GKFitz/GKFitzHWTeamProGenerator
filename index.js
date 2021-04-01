@@ -9,6 +9,7 @@ const Manager= require("./lib/Manager.js");
 
 const teamArray = [];
 
+addManager();
 // const roger= new Employee("roger", 1, "rogerDodger@test.com");
 
 // console.log(roger)
