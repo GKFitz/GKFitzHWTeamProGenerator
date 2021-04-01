@@ -1,4 +1,3 @@
-// const fs = require('fs');
 const test = require('jest');
 const inquirer = require('inquirer');
 const profileGenerator= require("./profileGenerator");
@@ -8,12 +7,10 @@ const Intern= require("./lib/Intern.js");
 const Manager= require("./lib/Manager.js");
 
 const teamArray = [];
-
+//this starts the inquirer input process
 addManager();
-// const roger= new Employee("roger", 1, "rogerDodger@test.com");
 
-// console.log(roger)
-
+//This function starts inquires about the manager
 function addManager() {
     console.log("Welcome to the team!");
     inquirer.prompt([
@@ -46,9 +43,11 @@ function addManager() {
         let employee = new Manager(data.name, data.id, data.email, data.officeNumber);
         teamArray.push(employee);
         addEmployee();
-    })
+    });
     
-}
+};
+
+// This function makes gives the user the option to add more employees, Engineer or intern, or to end input process, which will tigger the  html generator process
 function addEmployee () {
     inquirer.prompt ([
         {
@@ -78,16 +77,11 @@ function addEmployee () {
 
         }
 
-    })
+    });
 
-}
+};
 
-
-
-
-
-
-
+//once the user selects to adds an engineer, this function will add the new engineer object to the array
 function addEngineer() {
     inquirer.prompt([
         {
@@ -118,8 +112,9 @@ function addEngineer() {
         addEmployee();
         
     });
-}
+};
 
+//once the user selects to adds an intern, this function will add the new intern object to the array
 function addIntern(){
     inquirer.prompt([
         {
@@ -150,6 +145,6 @@ function addIntern(){
         addEmployee();
 
     });
-}
+};
 
 

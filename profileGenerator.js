@@ -44,11 +44,13 @@ function profileGenerator(teamArray){
         `;
         //should creat a div for each employee of the object
         for(let employee of teamArray){
+            //prefer the html += to create html elements using the template literals
             html+= `<div>
             <h2>${employee.getName()}</h2>
             <h3>${employee.getRole()}</h3>
             <p>id: ${employee.getId()}</p>
             <p>Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></p>`;
+                //this conditional will make sure the that the different items go to the right role
                 if(employee.getRole() === "Manager") {
                     html+= `<p>Office number: ${employee.getOfficeNumber()}</p>`;
                 }else if(employee.getRole() === "Engineer"){
@@ -67,6 +69,7 @@ function profileGenerator(teamArray){
     </body>
     </html>`;
     console.log(html)
+    //this will write the html file and will generate it in the dist file
     fs.writeFileSync("./dist/team.html", html);
 
 }
