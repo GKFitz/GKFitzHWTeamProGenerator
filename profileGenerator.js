@@ -39,7 +39,8 @@ function profileGenerator(teamArray){
         html += `
     </body>
     </html>`;
-   
+    console.log(html)
+    fs.writeFileSync("./dist/team.html", html);
 
 }
 
