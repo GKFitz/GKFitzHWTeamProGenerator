@@ -9,26 +9,53 @@ function profileGenerator(teamArray){
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--- FontAwesome ---->
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
         <title> My Team</title>
+        <style>
+            body{
+                margin:0;
+                text-align: center;
+                font-family: sans-serif;
+
+            }
+            h1{
+                background-color: teal;
+                color:white;
+                padding: 40px;
+
+            }
+            h2{
+                background-color: lightskyblue;
+            }
+            div{
+                display: inline-block;
+                width: 200px;
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid black;
+                 
+            }
+        </style>
         
     </head>
     <body>
         <h1>The Team</h1> 
         `;
-        //should creat a div for each part of the object
+        //should creat a div for each employee of the object
         for(let employee of teamArray){
             html+= `<div>
             <h2>${employee.getName()}</h2>
             <h3>${employee.getRole()}</h3>
             <p>id: ${employee.getId()}</p>
-            <p>email:>${employee.getEmail()}</p>`;
+            <p>Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></p>`;
                 if(employee.getRole() === "Manager") {
-                    html+= `<p>office number: ${employee.getOfficeNumber()}</p>`;
+                    html+= `<p>Office number: ${employee.getOfficeNumber()}</p>`;
                 }else if(employee.getRole() === "Engineer"){
-                    html+= `<p>github: ${employee.getGithub()}</p>`;
+                    html+= `<p>Github: <a href="${employee.getGithub()}"> ${employee.getGithub()}</a></p>`;
 
                 }else if(employee.getRole() === "Intern") {
-                    html+= `<p>school: ${employee.getSchool()}</p>`;
+                    html+= `<p>School: ${employee.getSchool()}</p>`;
                 };
 
 
@@ -43,10 +70,6 @@ function profileGenerator(teamArray){
     fs.writeFileSync("./dist/team.html", html);
 
 }
-
-
-
-
 
 
 module.exports = profileGenerator
