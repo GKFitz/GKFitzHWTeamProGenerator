@@ -21,7 +21,18 @@ function profileGenerator(teamArray){
             <h2>${employee.getName()}</h2>
             <h3>${employee.getRole()}</h3>
             <p>id: ${employee.getId()}</p>
-        
+            <p>email:>${employee.getEmail()}</p>`;
+                if(employee.getRole() === "Manager") {
+                    html+= `<p>office number: ${employee.getOfficeNumber()}</p>`;
+                }else if(employee.getRole() === "Engineer"){
+                    html+= `<p>github: ${employee.getGithub()}</p>`;
+
+                }else if(employee.getRole() === "Intern") {
+                    html+= `<p>school: ${employee.getSchool()}</p>`;
+                };
+
+
+            html+= `
             
             </div>`;
         }
