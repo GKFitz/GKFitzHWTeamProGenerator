@@ -2,9 +2,9 @@ const test = require('jest');
 const inquirer = require('inquirer');
 const profileGenerator= require("./profileGenerator");
 // const Employee= require("./lib/Employee.js");
-const Engineer= require("./lib/Engineer.js");
-const Intern= require("./lib/Intern.js");
-const Manager= require("./lib/Manager.js");
+const Engineer= require("./Develop/lib/Engineer.js");
+const Intern= require("./Develop/lib/Intern.js");
+const Manager= require("./Develop/lib/Manager.js");
 
 const teamArray = [];
 //this starts the inquirer input process
