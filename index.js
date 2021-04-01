@@ -112,6 +112,9 @@ function addEngineer() {
 
     ])
     .then(function(data){
+        let employee = new Engineer(data.name, data.id, data.email, data.github);
+        teamArray.push(employee);
+        addEmployee();
         
     });
 }
@@ -141,7 +144,9 @@ function addIntern(){
 
     ])
     .then (function(data){
-        
+        let employee = new Intern(data.name, data.id, data.email, data.school);
+        teamArray.push(employee);
+        addEmployee();
 
     });
 }
